@@ -1,0 +1,103 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="pafy" />
+          <option value="aiohttp" />
+          <option value="fuzzywuzzy" />
+          <option value="hupper" />
+          <option value="seaborn" />
+          <option value="beautifulsoup4" />
+          <option value="watchdog" />
+          <option value="PyQt5" />
+          <option value="numpy" />
+          <option value="win10toast" />
+          <option value="Flask" />
+          <option value="selenium" />
+          <option value="firebase-admin" />
+          <option value="ujson" />
+          <option value="requests" />
+          <option value="PyPDF2" />
+          <option value="pyserial" />
+          <option value="twilio" />
+          <option value="tabula-py" />
+          <option value="nltk" />
+          <option value="Pillow" />
+          <option value="SocksiPy-branch" />
+          <option value="xlrd" />
+          <option value="fpdf2" />
+          <option value="mysql-connector-python" />
+          <option value="word2number" />
+          <option value="tornado" />
+          <option value="oauth2client" />
+          <option value="keras" />
+          <option value="pymongo" />
+          <option value="playsound" />
+          <option value="pyttsx3" />
+          <option value="pydantic" />
+          <option value="openpyxl" />
+          <option value="pytesseract" />
+          <option value="requests-mock" />
+          <option value="pyglet" />
+          <option value="urllib3" />
+          <option value="thirdai" />
+          <option value="google-api-python-client" />
+          <option value="pygame" />
+          <option value="wikipedia" />
+          <option value="tqdm" />
+          <option value="yfinance" />
+          <option value="tweepy" />
+          <option value="tkcalendar" />
+          <option value="pytube" />
+          <option value="mechanize" />
+          <option value="googletrans" />
+          <option value="translate-tool" />
+          <option value="pywhatkit" />
+          <option value="mutagen" />
+          <option value="Unidecode" />
+          <option value="pynput" />
+          <option value="gTTS" />
+          <option value="ccxt" />
+          <option value="fitz" />
+          <option value="fastapi" />
+          <option value="Django" />
+          <option value="python-docx" />
+          <option value="matplotlib" />
+          <option value="pyshorteners" />
+          <option value="geocoder" />
+          <option value="APScheduler" />
+          <option value="PyQRCode" />
+          <option value="freegames" />
+          <option value="pyperclip" />
+          <option value="newspaper3k" />
+          <option value="opencv-python" />
+          <option value="tensorflow" />
+          <option value="pandas" />
+          <option value="pytest" />
+          <option value="qrcode" />
+          <option value="googletrans-new" />
+          <option value="slab" />
+          <option value="psutil" />
+          <option value="mediapipe" />
+          <option value="rich" />
+          <option value="httplib2" />
+          <option value="protobuf" />
+          <option value="colorama" />
+          <option value="plyer" />
+          <option value="Flask-Ask" />
+          <option value="emoji" />
+          <option value="PyAutoGUI" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N806" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
