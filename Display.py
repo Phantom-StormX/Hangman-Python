@@ -3,9 +3,6 @@ import Difficulty
 
 hangman = [
     """
-    =========
-    """,
-    """
      -----
      |   |
          |
@@ -54,3 +51,7 @@ hangman = [
     =========
     """
 ]
+
+hangman_start = '''
+    =========
+'''

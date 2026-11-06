@@ -3,59 +3,79 @@ import Difficulty
 import Display
 import sys
 
-print(Welcome.Welcome_page)
 
-pick_difficulty = input('''
-please pick a word difficulty by typing 
-and entering its corresponding number:
+def choose_word():
+    while True:
+        pick_difficulty = input('''
+Please pick a word difficulty by typing its number:
 1. Easy
 2. Medium
 3. Hard
 4. SUPER HARD!
 5. Quit
-''')
+''').strip()
 
-random_word = ''
-if pick_difficulty == '1':
-    random_word = Difficulty.easy
-elif pick_difficulty == '2':
-    random_word = Difficulty.medium
-elif pick_difficulty == '3':
-    random_word = Difficulty.hard
-elif pick_difficulty == '4':
-    random_word = Difficulty.super_hard
-elif pick_difficulty == '5':
-    sys.exit()
-else:
-    print('not valid please try again')
-
-guessed = []
-wrong_guess_list = []
-wrong_guess = 0
-max_attempt = 6
-
-while wrong_guess < max_attempt:
-    layout = ''
-    for letter in random_word:
-        if letter in guessed:
-            layout += letter + " "
+        if pick_difficulty == '1':
+            return Difficulty.easy.lower()
+        elif pick_difficulty == '2':
+            return Difficulty.medium.lower()
+        elif pick_difficulty == '3':
+            return Difficulty.hard.lower()
+        elif pick_difficulty == '4':
+            return Difficulty.super_hard.lower()
+        elif pick_difficulty == '5':
+            sys.exit()
         else:
-            layout += '_' * len(letter)
-            print(Display.hangman[wrong_guess])
-            print(f'word:{layout} ')
-        guess = input('guess a letter: ').lower()
-        print(guess)
+            print('Not valid; please try again.')
+
+
+def guesses_and_layout(random_word):
+    guessed = set()
+    wrong_guess_list = []
+    wrong_guess = 0
+    max_attempt = 6
+
+    while wrong_guess < max_attempt:
+        layout = ''
+        for letter in random_word:
+            if letter in guessed:
+                layout += letter
+            else:
+                layout += '_'
+        print(f'word: {layout}')
+
+        if all(not letter.isalpha() or letter in guessed for letter in random_word):
+            print('You guessed the word!')
+            return
+
+        print(Display.hangman_start)
+        guess = input('guess a letter: ').strip().lower()
 
         if len(guess) != 1 or not guess.isalpha():
             print('please enter ONE ACTUAL letter')
-        elif guess in guessed:
-            print('please pick another letter that you have NOT used:')
-            guessed.append(guess)
+            continue
+        if guess in guessed:
+            print('please pick another letter that you have NOT used')
+            continue
 
-        if guess != letter:
+        guessed.add(guess)
+        if guess in random_word:
+            print('yaya you got a letter!')
+        else:
             wrong_guess += 1
             wrong_guess_list.append(guess)
-            print("hey that letter isn't in the word.")
+            print("that letter isn't in the word.")
+            print(Display.hangman[wrong_guess-1])
             print(f'letters that are not in the word: {wrong_guess_list}')
-        else:
-            print('yay you guessed the right letter!')
+
+    print(f'You ran out of guesses. The word was: {random_word}')
+
+
+def main_run():
+    print(Welcome.Welcome_page)
+    random_word = choose_word()
+    guesses_and_layout(random_word)
+
+
+if __name__ == "__main__":
+    main_run()
