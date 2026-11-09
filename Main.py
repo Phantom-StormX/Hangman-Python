@@ -38,6 +38,11 @@ def guesses_and_layout(random_word):
     start = True
 
     while wrong_guess < max_attempt:
+        if wrong_guess == 0:
+            print(Display.hangman_start)
+        else:
+            print(Display.hangman[wrong_guess -1])
+
         layout = ''
         for letter in random_word:
             if letter in guessed:
@@ -50,12 +55,7 @@ def guesses_and_layout(random_word):
             print('You guessed the word!')
             return
 
-        if wrong_guess == 0:
-            print(Display.hangman_start)
-            start = False
-
-
-        guess = input(f'''you only have {wrong_guess} wrong guesses out of 6 attempts. 
+        guess = input(f'''you have {wrong_guess} wrong guess(es) out of 6 attempts. 
 guess a letter: ''').lower()
 
         if len(guess) == 2 or not guess.isalpha():
@@ -66,14 +66,13 @@ guess a letter: ''').lower()
             continue
 
         guessed.add(guess)
-
         if guess in random_word:
             print('yaya you got a letter!')
         else:
-            wrong_guess += 1
             wrong_guess_list.append(guess)
+            wrong_guess += 1
             print("that letter isn't in the word.")
-            print(Display.hangman[wrong_guess - 1])
+            #print(Display.hangman[wrong_guess - 1])
             print(f'letters that are not in the word: {wrong_guess_list}')
 
 
@@ -83,6 +82,7 @@ guess a letter: ''').lower()
 
 def main_run():
     print(Welcome.Welcome_page)
+    play_count = 0
 
     while True:
         random_word = choose_difficulty()
@@ -91,11 +91,14 @@ def main_run():
         while True:
             play_again = input('Play again? (y/n): ').lower()
 
+
             if play_again in ('y'):
+                play_count += 1
+                print(f'cool you have played {play_count} time(s)! ')
                 break
 
             elif play_again in ('n'):
-                print('okie dokie thank you for playing')
+                print(f'okie dokie thank you for playing {play_count} time(s)!')
                 sys.exit()
             else:
                 print("Please enter 'y' or 'n'.")
