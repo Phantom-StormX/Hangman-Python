@@ -53,5 +53,8 @@ hangman = [
 ]
 
 hangman_start = '''
+    
+    
+    
     =========
 '''
