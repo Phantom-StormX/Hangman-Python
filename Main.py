@@ -79,7 +79,6 @@ guess a letter: ''').lower()
     print(f'You ran out of guesses. The word was: {random_word}')
     return False
 
-
 # runs the entirety of the games, functions and all, also asks the user if they want to playa again, and tracks how many times you have played
 def main_run():
     print(Welcome.Welcome_page)

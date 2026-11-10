@@ -5,6 +5,7 @@ medium_words = ['ally','complex','cornucopia','pumpkin','python','believe','hols
 hard_words = ['erudite','incomprehensibility','foe','oak','zinc','humpback','wolfhound','doubtfully','xenon','hiking']
 SUPERHARD_WORDS = ['pneumonoultramicroscopicsilicovolcanoconiosis','supercalifragilisticexpialidocious','hippopotamophobia','xenotransplantation','sly','rutabaga','dinosaur','oleszewski','TV','Luxembourg']
 
+
 def choose_random(difficulty):
     if difficulty == '1':
         return random.choice(easy_words)

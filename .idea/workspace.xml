@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f90d828a-3035-4da3-8f34-9f07f5b4a0f2" name="Changes" comment="added in a few comments">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Difficulty.py" beforeDir="false" afterPath="$PROJECT_DIR$/Difficulty.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-    </list>
+    <list default="true" id="f90d828a-3035-4da3-8f34-9f07f5b4a0f2" name="Changes" comment="added in a few comments" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -297,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1794339804495</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added in a few comments">
+      <option name="closed" value="true" />
+      <created>1794341586974</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1794341586974</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,7 +313,8 @@
     <MESSAGE value="EVEN  MORE BUG FIXES&#10;&#10;fully functions, added in play again logic and randomizing the word again" />
     <MESSAGE value="fixed play again bug" />
     <MESSAGE value="added in a few comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="added in a few comments" />
+    <MESSAGE value="added a new word in super hard" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a new word in super hard" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WelcomeScreen$script2.coverage" NAME="script2 Coverage Results" MODIFIED="1788202500680" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
