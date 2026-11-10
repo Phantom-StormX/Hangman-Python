@@ -3,9 +3,10 @@ import Difficulty
 import Display
 import sys
 
+
 # function for the choice of difficulty
 def choose_difficulty():
-    while True: # loops the difficulty selection until user chooses a valid choice
+    while True:  # loops the difficulty selection until user chooses a valid choice
         pick_difficulty = input('''
 Please pick a word difficulty by typing its number:
 1. Easy
@@ -16,7 +17,7 @@ Please pick a word difficulty by typing its number:
 ''')
         new_word = ''
         if pick_difficulty == '1':
-            return Difficulty.choose_random('1').lower() # lower() keeps all words lowercase
+            return Difficulty.choose_random('1').lower()  # lower() keeps all words lowercase
         elif pick_difficulty == '2':
             return Difficulty.choose_random('2').lower()
         elif pick_difficulty == '3':
@@ -25,9 +26,10 @@ Please pick a word difficulty by typing its number:
             return Difficulty.choose_random('4').lower()
         elif pick_difficulty == '5':
             print('okay bye bye')
-            sys.exit() # exits system
+            sys.exit()  # exits system
         else:
             print('Not valid; please try again.')
+
 
 # function for guess logic and layout of the game (ex the _ _ _ part)
 def guesses_and_layout(random_word):
@@ -35,32 +37,32 @@ def guesses_and_layout(random_word):
     wrong_guess_list = []
     wrong_guess = 0
     max_attempt = 6
-    start = True
 
     while wrong_guess < max_attempt:
-        if wrong_guess == 0:
+        if wrong_guess == 0:  # prints out the starting thingy for the game
             print(Display.hangman_start)
-        else:
-            print(Display.hangman[wrong_guess -1])
+        else:  # if user guesses wrong it'll add the levels to hangman
+            print(Display.hangman[wrong_guess - 1])
 
         layout = ''
-        for letter in random_word:
-            if letter in guessed:
+        for letter in random_word:  # for the letter in the word(Aka what the user guesses), it will add the letter length,
+            if letter in guessed:  # if letter in the word it will add the letter with '_'
                 layout += letter
             else:
                 layout += ' _ '
         print(f'word: {layout}')
 
-        if all(not letter.isalpha() or letter in guessed for letter in random_word): # if ALL the letters are true(as in actual letters), and is a part of the word, then you win
+        if all(not letter.isalpha() or letter in guessed for letter in
+               random_word):  # if ALL the letters are true(as in actual letters), and is a part of the word, then you win
             print('You guessed the word!')
             return
 
         guess = input(f'''you have {wrong_guess} wrong guess(es) out of 6 attempts. 
 guess a letter: ''').lower()
 
-        if len(guess) == 2 or not guess.isalpha():
+        if len(guess) == 1 or not guess.isalpha():  # if the length of guess is more than 1, and/or if it isn't even a letter then it will tell the user to print out an actual letter
             print('please enter ONE ACTUAL letter')
-            continue
+            continue  # goes back to the 'true' if statement beforehand
         if guess in guessed:
             print('please pick another letter that you have NOT used')
             continue
@@ -72,14 +74,13 @@ guess a letter: ''').lower()
             wrong_guess_list.append(guess)
             wrong_guess += 1
             print("that letter isn't in the word.")
-            #print(Display.hangman[wrong_guess - 1])
             print(f'letters that are not in the word: {wrong_guess_list}')
-
 
     print(f'You ran out of guesses. The word was: {random_word}')
     return False
 
 
+# runs the entirety of the games, functions and all, also asks the user if they want to playa again, and tracks how many times you have played
 def main_run():
     print(Welcome.Welcome_page)
     play_count = 1
@@ -90,7 +91,6 @@ def main_run():
 
         while True:
             play_again = input('Play again? (y/n): ').lower()
-
 
             if play_again in ('y'):
                 print(f'cool you have played {play_count} time(s)! ')
