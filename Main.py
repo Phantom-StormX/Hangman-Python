@@ -60,7 +60,7 @@ def guesses_and_layout(random_word):
         guess = input(f'''you have {wrong_guess} wrong guess(es) out of 6 attempts. 
 guess a letter: ''').lower()
 
-        if len(guess) == 1 or not guess.isalpha():  # if the length of guess is more than 1, and/or if it isn't even a letter then it will tell the user to print out an actual letter
+        if len(guess) == 2 or not guess.isalpha():  # if the length of guess is more than 1, and/or if it isn't even a letter then it will tell the user to print out an actual letter
             print('please enter ONE ACTUAL letter')
             continue  # goes back to the 'true' if statement beforehand
         if guess in guessed:
