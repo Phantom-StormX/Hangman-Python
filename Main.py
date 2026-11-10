@@ -82,7 +82,7 @@ guess a letter: ''').lower()
 
 def main_run():
     print(Welcome.Welcome_page)
-    play_count = 0
+    play_count = 1
 
     while True:
         random_word = choose_difficulty()
@@ -93,8 +93,8 @@ def main_run():
 
 
             if play_again in ('y'):
-                play_count += 1
                 print(f'cool you have played {play_count} time(s)! ')
+                play_count += 1
                 break
 
             elif play_again in ('n'):
