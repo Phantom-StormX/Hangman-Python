@@ -33,7 +33,7 @@ Please pick a word difficulty by typing its number:
 
 # function for guess logic and layout of the game (ex the _ _ _ part)
 def guesses_and_layout(random_word):
-    guessed = set()
+    guessed = set()  # there CAN NOT BE DUPLICATES in a set which simplies my code a lot more than just using a list
     wrong_guess_list = []
     wrong_guess = 0
     max_attempt = 6
@@ -68,21 +68,22 @@ guess a letter: ''').lower()
             continue
 
         guessed.add(guess)
-        if guess in random_word:
+        if guess in random_word:  # if the guess is in the word, then it prints that lol
             print('yaya you got a letter!')
-        else:
+        else:  # if the guess is wrong...
             wrong_guess_list.append(guess)
             wrong_guess += 1
             print("that letter isn't in the word.")
             print(f'letters that are not in the word: {wrong_guess_list}')
 
     print(f'You ran out of guesses. The word was: {random_word}')
-    return False
+    return False  # ends the loop thingymabobber
+
 
 # runs the entirety of the games, functions and all, also asks the user if they want to playa again, and tracks how many times you have played
 def main_run():
     print(Welcome.Welcome_page)
-    play_count = 1
+    play_count = 1  # starts at one bc this only is being used at the end of the game
 
     while True:
         random_word = choose_difficulty()
