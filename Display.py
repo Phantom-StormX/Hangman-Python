@@ -1,5 +1,4 @@
 import Difficulty
-# import Main
 
 hangman = [
     """
