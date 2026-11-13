@@ -58,4 +58,5 @@ If you are running from a compiled output folder, make sure the application is l
     - I did want to put more research in it but it was not needed 
       
 ### Credentials
-  - [https://www.geeksforgeeks.org/python/hangman-game-python/](url) help with the letter reading 
+  - [https://www.geeksforgeeks.org/python/hangman-game-python/](url)
+    - helped with the letter reading 
