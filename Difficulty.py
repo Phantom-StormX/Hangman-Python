@@ -10,6 +10,7 @@ SUPERHARD_WORDS = ['pneumonoultramicroscopicsilicovolcanoconiosis', 'supercalifr
                    'luxembourg']
 
 
+
 def choose_random(difficulty):
     if difficulty == '1':
         return random.choice(easy_words)

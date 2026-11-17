@@ -52,8 +52,7 @@ def guesses_and_layout(random_word):
                 layout += ' _ '
         print(f'word: {layout}')
 
-        if all(not letter.isalpha() or letter in guessed for letter in
-               random_word):  # if ALL the letters are true(as in actual letters), and is a part of the word, then you win
+        if all(not letter.isalpha() or letter in guessed for letter in random_word):  # if ALL the letters are true(as in actual letters), and is a part of the word, then you win
             print('You guessed the word!')
             return
 
