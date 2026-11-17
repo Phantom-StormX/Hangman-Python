@@ -1,6 +1,7 @@
 import Welcome
 import Difficulty
 import Display
+import sys
 
 
 # function for the choice of difficulty
